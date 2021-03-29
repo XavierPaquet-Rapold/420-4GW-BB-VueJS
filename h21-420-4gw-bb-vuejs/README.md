@@ -1,4 +1,4 @@
-# quizz_vuejs
+# h21-420-4gw-bb-vuejs
 
 ## Project setup
 ```
