@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
 import Home from '../views/Home'
-import Add_Event from '../views/add-event'
+import Add_Event from '../views/add_event'
 import Change_Event from '../views/modify_event'
 const routes = [
     {
