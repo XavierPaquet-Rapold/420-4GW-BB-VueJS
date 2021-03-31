@@ -5,6 +5,9 @@
   >
     <h3>
       {{ task.text }}
+      <router-link :to="{ name: 'Modifier évènement', params: { id: task.id }}">
+        <Button text="Modifier" color="green"/>
+       </router-link>
       <i @click="$emit('delete-task', task.id)" class="fas fa-times"></i>
     </h3>
     <p>{{ task.day }}</p>
@@ -12,10 +15,14 @@
 </template>
 
 <script>
+import Button from './Button'
 export default {
   name: 'Task',
   props: {
     task: Object,
+  },
+  components: {
+    Button,
   },
 }
 </script>

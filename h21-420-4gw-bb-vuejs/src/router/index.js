@@ -15,9 +15,9 @@ const routes = [
         component: Add_Event
     },
     {
-        path: '/change-event',
+        path: '/change-event/:id',
         name: 'Modifier évènement',
-        component: Change_Event
+        component: Change_Event,
     },
 ]
 
