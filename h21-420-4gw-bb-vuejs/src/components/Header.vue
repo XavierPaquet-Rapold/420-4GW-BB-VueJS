@@ -1,13 +1,19 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
+    <router-link to="/">
+    <Button 
+      v-show="addPage"
+      :text= 'Ajout'
+      :color= 'green'
+    />
+    </router-link>
+
     <router-link to="/add-event">
     <Button 
       v-show="homePage"
-      @btn-click="$emit('toggle-add-task')"
-      :text="showAddTask ? 'Fermer' : 'Ajout'"
-      :color="showAddTask ? 'red' : 'green'"
-       
+      :text= 'Ajout'
+      :color= 'green'
     />
     </router-link>
   </header>
@@ -20,7 +26,6 @@ export default {
   name: 'Header',
   props: {
     title: String,
-    showAddTask: Boolean,
   },
   components: {
     Button,
@@ -28,6 +33,13 @@ export default {
   computed: {
     homePage() {
       if (this.$route.path === '/') {
+        return true
+      } else {
+        return false
+      }
+    },
+    addPage() {
+      if (this.$route.path === '/add-event') {
         return true
       } else {
         return false

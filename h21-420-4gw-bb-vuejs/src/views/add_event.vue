@@ -1,19 +1,11 @@
 <template>
-  <AddTask v-show="showAddTask" @add-task="addTask" />
-   <Tasks
-    @toggle-reminder="toggleReminder"
-    @delete-task="deleteTask"
-    :tasks="tasks"
-  />
+  <AddTask @add-task="addTask" />
 </template>
 
 <script>
 import AddTask from '../components/AddTask'
 export default {
-  name: 'AddTask',
-  props: {
-    showAddTask: Boolean,
-  },
+  name: 'Add-event',
   components: {
     AddTask,
   },
