@@ -9,6 +9,7 @@
 
 <script>
 import Tasks from '../components/Tasks'
+import AddTask from '../components/AddTask'
 export default {
   name: 'Home',
   props: {
@@ -16,7 +17,7 @@ export default {
   },
   components: {
     Tasks,
-
+    AddTask,
   },
   data() {
     return {
@@ -24,7 +25,17 @@ export default {
     }
   },
   methods: {
-    
+    async addTask(task) {
+      const res = await fetch('api/tasks', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(task),
+      })
+      const data = await res.json()
+      this.tasks = [...this.tasks, data]
+    },
     async deleteTask(id) {
       if (confirm('Are you sure?')) {
         const res = await fetch(`api/tasks/${id}`, {
