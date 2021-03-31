@@ -4,16 +4,16 @@
     <router-link to="/">
     <Button 
       v-show="addPage"
-      :text= 'Ajout'
-      :color= 'green'
+      text= 'Accueil'
+      color= 'green'
     />
     </router-link>
 
     <router-link to="/add-event">
     <Button 
       v-show="homePage"
-      :text= 'Ajout'
-      :color= 'green'
+      text= 'Ajout'
+      color= 'green'
     />
     </router-link>
   </header>

@@ -1,23 +1,32 @@
 <template>
-  <div :key="task.id" v-for="task in tasks">
-    <Task
-      @toggle-reminder="$emit('toggle-reminder', task.id)"
-      @delete-task="$emit('delete-task', task.id)"
-      :task="task"
-    />
-  </div>
+  <form @submit="onSubmit" class="change-form">
+    <div class="form-control">
+      <label>Task</label>
+      <input type="text" v-model="text" name="text" placeholder="Add Task" />
+    </div>
+    <div class="form-control">
+      <label>Day & Time</label>
+      <input
+        type="text"
+        v-model="day"
+        name="day"
+        placeholder= {{task.day}}
+      />
+    </div>
+    <div class="form-control form-control-check">
+      <label>Set Reminder</label>
+      <input type="checkbox" v-model="reminder" name="reminder" />
+    </div>
+
+    <input type="submit" value="Save Task" class="btn btn-block" />
+  </form>
 </template>
 
 <script>
-import Task from './Task'
-export default {
-  name: 'Tasks',
-  props: {
-    tasks: Array,
-  },
-  components: {
-    Task,
-  },
-  emits: ['delete-task', 'toggle-reminder'],
-}
+    export default {
+    name: 'task',
+    props: {
+        task: Object,
+    },
+    }
 </script>
