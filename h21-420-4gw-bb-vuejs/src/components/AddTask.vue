@@ -1,30 +1,30 @@
 <template>
   <form @submit="onSubmit" class="add-form">
     <div class="form-control">
-      <label>Task</label>
-      <input type="text" v-model="text" name="text" placeholder="Add Task" />
+      <label>Tache</label>
+      <input type="text" v-model="text" name="text" placeholder="Ajoutez une tache" />
     </div>
     <div class="form-control">
-      <label>Day & Time</label>
+      <label>Jour & Temps</label>
       <input
         type="text"
         v-model="day"
         name="day"
-        placeholder="Add Day & Time"
+        placeholder="Ajouter Jour & Temps"
       />
     </div>
     <div class="form-control form-control-check">
-      <label>Set Reminder</label>
+      <label>Mettre un rappel</label>
       <input type="checkbox" v-model="reminder" name="reminder" />
     </div>
 
-    <input type="submit" value="Save Task" class="btn btn-block" />
+    <input type="submit" value="Sauvegardez la tache" class="btn btn-block" />
   </form>
 </template>
 
 <script>
 export default {
-  name: 'AddTask',
+  name: 'AjoutTache',
   data() {
     return {
       text: '',
@@ -36,7 +36,7 @@ export default {
     onSubmit(e) {
       e.preventDefault()
       if (!this.text) {
-        alert('Please add a task')
+        alert('Svp ajoutez une tache')
         return
       }
       const newTask = {
