@@ -10,13 +10,19 @@
       "id": "3",
       "text": "Food shopping",
       "day": "March 7th at 2:00pm",
-      "reminder": true
+      "reminder": false
     },
     {
-      "text": "yop",
-      "day": "10 novembre 2021",
+      "text": "hoi",
+      "day": "20 mars 2021",
+      "reminder": false,
+      "id": "qRFmOhn"
+    },
+    {
+      "text": "YOOOOO",
+      "day": "20 mars 2024",
       "reminder": true,
-      "id": "1ereIHe"
+      "id": "Z7H34Gf"
     }
   ]
 }

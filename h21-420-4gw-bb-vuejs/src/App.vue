@@ -1,8 +1,7 @@
 <template>
   <div class="container">
     <Header
-      @toggle-add-task="toggleAddTask"
-      title="Task Tracker"
+      title="Traqueur de Taches"
       :showAddTask="showAddTask"
     />
     <router-view :showAddTask="showAddTask"></router-view>
@@ -15,17 +14,7 @@ export default {
   name: 'App',
   components: {
     Header,
-  },
-  data() {
-    return {
-      showAddTask: false,
-    }
-  },
-  methods: {
-    toggleAddTask() {
-      this.showAddTask = !this.showAddTask
-    },
-  },
+  }
 }
 </script>
 
