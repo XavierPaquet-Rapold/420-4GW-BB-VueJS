@@ -1,13 +1,17 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button
+    <router-link to="/add-event">
+    <Button 
       v-show="homePage"
       @btn-click="$emit('toggle-add-task')"
       :text="showAddTask ? 'Fermer' : 'Ajout'"
       :color="showAddTask ? 'red' : 'green'"
+       
     />
+    </router-link>
   </header>
+  
 </template>
 
 <script>
