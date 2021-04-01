@@ -1,25 +1,20 @@
 <template>
-<ChangeTask :tasks="tasks"/>
+  <ChangeTask :task="task"/>
 </template>
 
 <script>
 import ChangeTask from '../components/ChangeTask'
 export default {
-  name: 'Home',
+  name: 'Modifier évènement',
   components: {
     ChangeTask,
   },
   data() {
     return {
-      tasks: [],
+      task: Object,
     }
   },
   methods: {
-    async fetchTasks() {
-      const res = await fetch('api/tasks')
-      const data = await res.json()
-      return data
-    },
     async fetchTask(id) {
       const res = await fetch(`api/tasks/${id}`)
       const data = await res.json()
@@ -27,7 +22,10 @@ export default {
     },
   },
   async created() {
-    this.tasks = await this.fetchTasks()
+    this.task = await this.fetchTask(this.$route.params.id)
   },
+  async changeTask(task) {
+      console.log(task)
+  }
 }
 </script>

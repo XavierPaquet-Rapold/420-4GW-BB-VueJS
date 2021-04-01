@@ -2,7 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 import Home from '../views/Home'
 import Add_Event from '../views/add_event'
-import Change_Event from '../views/modify_event'
+import modify_event from '../views/modify_event'
 const routes = [
     {
         path: '/',
@@ -15,9 +15,10 @@ const routes = [
         component: Add_Event
     },
     {
-        path: '/change-event/:id',
+        path: '/modify-event/:id',
         name: 'Modifier évènement',
-        component: Change_Event,
+        component: modify_event,
+        props: true
     },
 ]
 

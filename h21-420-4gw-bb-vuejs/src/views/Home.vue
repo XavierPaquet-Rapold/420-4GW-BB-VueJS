@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     async deleteTask(id) {
-      if (confirm('Are you sure?')) {
+      if (confirm('Êtes vous sûr?')) {
         const res = await fetch(`api/tasks/${id}`, {
           method: 'DELETE',
         })
