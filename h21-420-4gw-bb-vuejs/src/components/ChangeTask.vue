@@ -2,10 +2,10 @@
   <form @submit="onSubmit" class="change-form">
     <div class="form-control">
       <label>Task</label>
-      <input type="text" v-model="text" name="text" placeholder="Add Task" />
+      <input type="text" v-model="text" name="text" placeholder="Modifier la tache" />
     </div>
     <div class="form-control">
-      <label>Day & Time</label>
+      <label>Jour & Temps</label>
       <input
         type="text"
         v-model="day"
@@ -14,11 +14,11 @@
       />
     </div>
     <div class="form-control form-control-check">
-      <label>Set Reminder</label>
+      <label>Mettre un rappel</label>
       <input type="checkbox" v-model="reminder" name="reminder" />
     </div>
 
-    <input type="submit" value="Save Task" class="btn btn-block" />
+    <input type="submit" value="Sauvegardez la tache" class="btn btn-block" />
   </form>
 </template>
 
