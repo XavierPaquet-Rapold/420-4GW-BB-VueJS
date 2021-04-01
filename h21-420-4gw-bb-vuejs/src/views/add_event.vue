@@ -25,6 +25,7 @@ export default {
       })
       const data = await res.json()
       this.tasks = [...this.tasks, data]
+        alert('Bravo la tache a été ajouter avec succès')
     }
     
 }
